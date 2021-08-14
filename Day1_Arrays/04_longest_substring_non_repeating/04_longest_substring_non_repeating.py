@@ -16,11 +16,10 @@ def foo(s):
             l = l + 1
     return maxi
 
-
-
-
 s = "abcaabcdba"
 print(foo(s))
+
+
 
 
 
