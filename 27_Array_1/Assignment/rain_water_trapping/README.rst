@@ -1,12 +1,14 @@
 ==============================================================================
 Rain Water Trapped
-Problem Description
+==============================================================================
 
-Given a vector A of non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+** Problem Description
+
+** Given a vector A of non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
 
 
 
-Problem Constraints
+**Problem Constraints
 1 <= |A| <= 100000
 
 
@@ -48,5 +50,4 @@ Explanation 2:
 No water is trapped.
 
 
-==============================================================================
 
