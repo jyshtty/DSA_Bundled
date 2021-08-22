@@ -27,6 +27,6 @@ class Solution:
         return sum
 
 if __name__ == "__main__":
-    A = [ 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 ]
+    A = [9,1,4,0,2,8]
     obj = Solution()
     print(obj.trap(A))
