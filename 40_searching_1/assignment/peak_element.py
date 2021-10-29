@@ -64,11 +64,11 @@ class Solution:
         while l <= h:
             mid = l + (h-l)/2
             if mid != 0:
-                if A[mid] > A[mid -1] and A[mid] > A[mid + 1]:
+                if A[mid] >= A[mid -1] and A[mid] >= A[mid + 1]:
                     return A[mid]
-                elif A[mid] > A[mid - 1]:
+                elif A[mid] >= A[mid - 1]:
                     l = mid + 1
-                elif A[mid] < A[mid - 1]:
+                elif A[mid] <= A[mid - 1]:
                     h = mid - 1
             else:
                 if A[0] > A[1]:
@@ -77,5 +77,5 @@ class Solution:
         return 'Not Found'
 
 obj = Solution()
-A = [5, 4, 3, 2, 1]
+A = [ 1, 1000000000, 1000000000 ]
 print(obj.solve(A))

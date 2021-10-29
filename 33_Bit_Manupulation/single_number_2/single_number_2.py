@@ -63,14 +63,14 @@ class Solution:
         count = 0
         ans = 0
         for i in range(32):
+            count = 0
             for j in range(len(A)):
                 x = A[j] >> i
                 if (x & 1):
                     count += 1
-            print(count)
+            # print(count)
             if count % 3 == 1:
-                ans = ans + (1 << is)
-
+                ans = ans + (1 << i)
         return ans
 
 if __name__ == "__main__":
