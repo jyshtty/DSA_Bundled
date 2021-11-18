@@ -13,8 +13,10 @@ def foo(A):
     ls.append(merged_array)
     return ls
 
-A = [(1,3), (2,4), (5,7), (6,8)]
+A = [[1,3],[2,6],[8,10],[15,18]]
 print(foo(A))
+
+
 
 
 

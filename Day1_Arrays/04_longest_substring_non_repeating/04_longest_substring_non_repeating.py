@@ -1,6 +1,3 @@
-s = "abcaabcdba"
-s1 = "abcdefghijkbb"
-
 def foo(s):
     a = set()
     l = 0
