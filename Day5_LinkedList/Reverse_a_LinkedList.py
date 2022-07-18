@@ -15,4 +15,4 @@ class Solution(object):
             prev = curr
             curr = next
 
-        return prev
+        return prev # in line 15 of last iteration you did prev = curr. so when your curr is None, you prev will point to last number.
