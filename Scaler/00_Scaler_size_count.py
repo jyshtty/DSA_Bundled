@@ -2,6 +2,11 @@
 #
 # Idea - size of tree = size of left subtree + size of right subtree + 1
 
+# Idea is of post order
+#       First - calculate height of left sub tree
+#       Second - calculate height of right sub tree
+#       Third - At last the root.
+
 class Node:
     def __init__(self, x):
         self.val = x
@@ -9,12 +14,27 @@ class Node:
         self.right = None
 
 class Solution:
+    # recursive
     def size(self, root):
         if not root:
             return 0
         ls = self.size(root.left)
         rs = self.size(root.right)
         return ls + rs + 1
+
+    # Iterative
+    def count(self, A):
+        count = 0
+        queue = []
+        queue.append(A)
+        while (len(queue) > 0):
+            node = queue.pop(0)
+            count = count + 1
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+        return count
 
 if __name__ == "__main__":
     root = Node(10)
