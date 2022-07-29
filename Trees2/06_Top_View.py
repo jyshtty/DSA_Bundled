@@ -1,4 +1,5 @@
-# Right View - 1st node of Level order of every level.
+# Classic code - must see. Top View - Same as vertical view. But push only first element to hashmap
+
 class Node:
     # Constructor to create a new node
     def __init__(self, data):
@@ -10,24 +11,25 @@ from collections import deque
 class Solution:
     # @param A : root node of tree
     # @return a list of list of integers
-    def rightOrder(self, A):
+    def topView(self, A):
         curr = A
         q = deque()
-        q.append(curr)
+        q.append([curr, 0])
 
         ans = []
+        hashmap = {}
 
         while(q):
-            size = len(q)
-            level = []
-            for i in range(size):
-                u = q.popleft()
-                level.append(u.data)
-                if u.left:
-                    q.append(u.left)
-                if u.right:
-                    q.append(u.right)
-            ans.append(level[-1])
+            node, distance = q.popleft()
+            if distance not in hashmap:
+                hashmap[distance] = [node.data]
+                ans.append(node.data)
+
+            if node.left:
+                q.append([node.left, distance-1])
+            if node.right:
+                q.append([node.right, distance+1])
+
         return ans
 
 # Driver program to test above function
@@ -39,12 +41,8 @@ root.left.right = Node(5)
 root.right.left = Node(2)
 
 obj = Solution()
-print(obj.rightOrder(root))
+print(obj.topView(root))
 
-# Approach2
-# push level order right to left
 
-# Approach3
-# use stack instad of q
 
 
