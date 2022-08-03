@@ -53,7 +53,7 @@ class Solution:
 
 # Approach 4 Iterative Inorder Traversal
 class Solution:
-    def isValidBST(self, root: TreeNode) -> bool:
+    def isValidBST(self, root) -> bool:
         stack, prev = [], -math.inf
 
         while stack or root:
