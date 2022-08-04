@@ -15,7 +15,6 @@ def iterativePreorder(root):
     # Base CAse
     if root is None:
         return
-
     # create an empty stack and push root to it
     nodeStack = []
     nodeStack.append(root)
