@@ -1,3 +1,5 @@
+# Note - You can't garentee matrix[0][1] is always < matrix[1][0]
+
 class Solution:
     # @param A : list of list of integers
     # @param B : integer
