@@ -1,4 +1,4 @@
-# Approach1
+# Approach1 - Easy Solution
 
 
 class Solution(object):
