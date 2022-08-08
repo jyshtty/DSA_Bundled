@@ -1,4 +1,5 @@
 # Classic code - must see. Top View - Same as vertical view. But push only first element to hashmap
+# Idea is put the first number with the distinct distance in hashmap. - Which gives you the top order. 
 
 class Node:
     # Constructor to create a new node
