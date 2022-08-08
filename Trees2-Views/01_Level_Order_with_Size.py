@@ -1,3 +1,7 @@
+# BFS using len of quque for find number of levels.
+# O/p is list of liests
+
+
 class Node:
     # Constructor to create a new node
     def __init__(self, data):
