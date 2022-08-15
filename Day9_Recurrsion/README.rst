@@ -13,3 +13,11 @@ self.generate(stack + ["("], left - 1, right, result)
 It works because when you get back the control to the calling function, the stack value is still the same.
 You are changing it only for the called function i.e in its parameter.
 
+
+
+
+
+
+
+Palindrome partiioning is same as work break
+
