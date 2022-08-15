@@ -7,4 +7,5 @@ in recursion - you dont check. But checking is done as part of base-case
 
 
 Depth - number of edges from root to the nod
+
 Height = Number of edges from node to leaf
