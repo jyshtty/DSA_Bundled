@@ -10,8 +10,8 @@ class Solution:
             if left > right: return None
 
             # select the preorder_index element as the root and increment it
-            root_value = preorder[preorder_index]
-            root = TreeNode(root_value)
+            root_value = preorder[preorder_index]            # so important . only thing to remember in this program.
+            root = TreeNode(root_value)                      # so important
 
 
             preorder_index += 1
