@@ -1,4 +1,7 @@
 # LEetcode solution
+
+main step - inorder_index_map build a hashmap to store value -> its index relations
+
 class Solution:
     def buildTree(self, preorder, inorder):
         def array_to_tree(left, right):
