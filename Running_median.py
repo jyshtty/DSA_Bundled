@@ -1,35 +1,43 @@
+# Steps 
+# 1. # create left dabba, # create right dabba
+# 2. # make sure everything of left dabba is less than right
+# 3. # make sure length of left -  length of right Is not greater than 1
+# 4. # return left dabba top root
+
 class Solution:
-    # @param A : Number of nodes
-    # @param B : m*2 matrix where each row represents edge going from B[m][0] node to B[m][1]
-    # @param s : source node
-    # @param d : destination node
-    # @return an integer shortest distance from s to d
-    def solve(self, A, B, s, d):
-        adj_list = [[] for i in range(A+1)]
-        for i in B:
-            adj_list[i[0]].append(i[1])
-            adj_list[i[1]].append(i[0])
-        print(adj_list)
-        from collections import deque
-        q = deque()
-        visited = [0] * (A+1)
+    # @param A : list of integers
+    # @return a list of integers
+    def solve(self, A):
+    
+        from heapq import heapify, heappush, heappop
+        ans = [A[0]]
+        max_heap = [] # create left dabba
+        min_heap = [] # create right dabba
+    
+        heapify(max_heap)  
+        heapify(min_heap)
+    
+        heappush(max_heap, -1 * A[0])
+    
+        for i in range(1, len(A)):
+            # make sure everything of left dabba is less than right
+            if A[i] <= -max_heap[0]:
+                heappush(max_heap, -1 * A[i])
+            else:
+                heappush(min_heap, A[i])
+    
+            # make sure length of right is not greater than length of left
+            if len(min_heap) > len(max_heap):
+                x = heappop(min_heap)
+                heappush(max_heap, -1 * x)
+            
+            # make sure length of left -  length of right Is not greater than 1
+            if len(max_heap) - len(min_heap) > 1:
+                x = heappop(max_heap)
+                heappush(min_heap, -1 * x)
 
-        q.append(s)
-        visited[s] = True
-        distance = 0
-        while q:
-            u = q.popleft()
-            for i in adj_list[u]:
-                if not visited[i]:
-                    q.append(i)
-                    visited[i] = True
-            distance += 1
-            # if visited[d] == True:
-            #     return distance-1
-        return distance - 1
-
-if __name__ == "__main__":
-    A= 4
-    B= [[1, 2],  [2, 3], [3, 4]]
-    obj = Solution()
-    print(obj.solve(A, B, 1, 4))
+            ans.append(-max_heap[0])
+        return ans
+                
+                
+        
