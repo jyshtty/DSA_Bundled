@@ -11,9 +11,9 @@ Binary Search Tree
             if start > end:
               return None
             
-            root = (list[mid])
-            
             mid = start + (end-start)//2
+            
+            root = Node(list[mid])
             
             root.left = construct(list, start, mid-1)
             
