@@ -12,9 +12,13 @@ Binary Search Tree
               return None
             
             root = (list[mid])
+            
             mid = start + (end-start)//2
+            
             root.left = construct(list, start, mid-1)
+            
             root.right = construct(list, mid+1, end)
+            
             return root
             
   3. Search BST
