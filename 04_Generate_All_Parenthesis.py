@@ -14,7 +14,7 @@ class Solution:
             stack.append("(")
             self.generate(stack, left - 1, right, result)
             stack.pop()
-        if right > left:
+        if right < left:
             stack.append(")")
             self.generate(stack, left, right - 1, result)
             stack.pop()
