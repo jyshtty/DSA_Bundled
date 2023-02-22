@@ -4,6 +4,11 @@
 # 3. Check if nums[i] == nums[i+1], then i += 1
 # 4.  Do a func call for # All subsets that do not include nums[i]
 
+# Input:  S = {1, 2, 2}
+# Output:  {}, {1}, {2}, {1, 2}, {2, 2}, {1, 2, 2}
+# Explanation: The total subsets of given set are – {}, {1}, {2}, {2}, {1, 2}, {1, 2}, {2, 2}, {1, 2, 2}
+# Here {2} and {1, 2} are repeated twice so they are considered only once in the output
+
 
 class Solution(object):
     def subsetsWithDup(self, nums):
