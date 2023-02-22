@@ -29,10 +29,13 @@ class Solution(object):
 
         def generate(index):
             if index == len(nums):
+                
+                #You do this coz of shallow copy                 
                 new = []
                 for i in temp:
                     new.append(i)
                 ans.append(new)
+                
                 return
             temp.append(nums[index])
             generate(index + 1)
