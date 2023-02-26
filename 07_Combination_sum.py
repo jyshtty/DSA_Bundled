@@ -15,3 +15,26 @@ class Solution:
 
         backtrack(0, 0, [])
         return ans
+    
+    
+class Solution:
+    # @param A : list of integers
+    # @param B : integer
+    # @return a list of list of integers
+    def combinationSum(self, A, B):
+        def aux(ans, cur, A, B):
+            if sum(cur) > B:
+                return
+            elif sum(cur) == B:
+                if cur not in ans:
+                    ans.append(cur)
+                return
+            # try for all possible next candidate
+            for i in A:
+                aux(ans, sorted(cur + [i]), A, B)
+            return
+
+        A.sort()
+        ans = []
+        aux(ans, [], A, B)
+        return ans
