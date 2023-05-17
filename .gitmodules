@@ -16,3 +16,6 @@
 [submodule "Leetcode"]
 	path = Leetcode
 	url = https://github.com/jyshtty/leet_code.git
+[submodule "Neetcode_Solutions"]
+	path = Neetcode_Solutions
+	url = https://github.com/jyshtty/leetcode.git
