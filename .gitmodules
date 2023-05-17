@@ -4,3 +4,6 @@
 [submodule "Graphs"]
 	path = Graphs
 	url = https://github.com/jyshtty/Graphs.git
+[submodule "KMP"]
+	path = KMP
+	url = https://github.com/jyshtty/KMP.git
