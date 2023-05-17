@@ -22,3 +22,6 @@
 [submodule "Python_Leetcode_Solutions"]
 	path = Python_Leetcode_Solutions
 	url = https://github.com/jyshtty/leetcode-2.git
+[submodule "Leetcode_CPP_All"]
+	path = Leetcode_CPP_All
+	url = https://github.com/jyshtty/LeetCode-3.git
