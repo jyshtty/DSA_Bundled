@@ -1,3 +1,6 @@
 [submodule "DP-Scaler"]
 	path = DP-Scaler
 	url = https://github.com/jyshtty/DP-Scaler.git
+[submodule "Graphs"]
+	path = Graphs
+	url = https://github.com/jyshtty/Graphs.git
