@@ -10,3 +10,6 @@
 [submodule "Leetcode-1"]
 	path = Leetcode-1
 	url = https://github.com/jyshtty/Leetcode-1.git
+[submodule "Tries"]
+	path = Tries
+	url = https://github.com/jyshtty/Trie-and-Heaps.git
