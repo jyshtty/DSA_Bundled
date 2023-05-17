@@ -2,6 +2,7 @@
 <project version="4">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Git)" project-jdk-type="Python SDK" />
 =======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (New)" project-jdk-type="Python SDK" />
@@ -9,4 +10,7 @@
 =======
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.8 (Git)" project-jdk-type="Python SDK" />
 >>>>>>> Recursion_Backtracking/main
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7" project-jdk-type="Python SDK" />
+>>>>>>> Scaler_DSA_advanced/main
 </project>

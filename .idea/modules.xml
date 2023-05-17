@@ -4,6 +4,7 @@
     <modules>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Trees.iml" filepath="$PROJECT_DIR$/.idea/Trees.iml" />
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/LL-and-Trees.iml" filepath="$PROJECT_DIR$/.idea/LL-and-Trees.iml" />
@@ -11,6 +12,9 @@
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" filepath="$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" />
 >>>>>>> Recursion_Backtracking/main
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" filepath="$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" />
+>>>>>>> Scaler_DSA_advanced/main
     </modules>
   </component>
 </project>
