@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Trees.iml" filepath="$PROJECT_DIR$/.idea/Trees.iml" />
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/LL-and-Trees.iml" filepath="$PROJECT_DIR$/.idea/LL-and-Trees.iml" />
@@ -15,6 +16,9 @@
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" filepath="$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" />
 >>>>>>> Scaler_DSA_advanced/main
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Striver_DSA_Sheet.iml" filepath="$PROJECT_DIR$/.idea/Striver_DSA_Sheet.iml" />
+>>>>>>> Striver_DSA_Sheet/main
     </modules>
   </component>
 </project>
