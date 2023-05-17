@@ -3,10 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Trees.iml" filepath="$PROJECT_DIR$/.idea/Trees.iml" />
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/LL-and-Trees.iml" filepath="$PROJECT_DIR$/.idea/LL-and-Trees.iml" />
 >>>>>>> LL/main
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" filepath="$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" />
+>>>>>>> Recursion_Backtracking/main
     </modules>
   </component>
 </project>
