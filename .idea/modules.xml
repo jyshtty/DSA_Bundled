@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/Trees.iml" filepath="$PROJECT_DIR$/.idea/Trees.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/LL-and-Trees.iml" filepath="$PROJECT_DIR$/.idea/LL-and-Trees.iml" />
->>>>>>> LL/main
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" filepath="$PROJECT_DIR$/.idea/Recursion_Backtracking.iml" />
->>>>>>> Recursion_Backtracking/main
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" filepath="$PROJECT_DIR$/.idea/Scaler_DSA_advanced.iml" />
->>>>>>> Scaler_DSA_advanced/main
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Striver_DSA_Sheet.iml" filepath="$PROJECT_DIR$/.idea/Striver_DSA_Sheet.iml" />
->>>>>>> Striver_DSA_Sheet/main
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/Classic-Problems.iml" filepath="$PROJECT_DIR$/.idea/Classic-Problems.iml" />
->>>>>>> Classic-Problems/main
+      <module fileurl="file://$PROJECT_DIR$/.idea/DSA_Bundled.iml" filepath="$PROJECT_DIR$/.idea/DSA_Bundled.iml" />
     </modules>
   </component>
 </project>
