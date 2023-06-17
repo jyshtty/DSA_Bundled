@@ -9,8 +9,11 @@ def count_files_in_directory(directory):
         for i in files:
             if "py" in i:
                 dir_name = i.split(".")[0]
-                os.mkdir("/"+dir_name )
-                # shutil.move(i, dir_name)
+                with open("README.md", 'w') as file:
+                    file.write("# " + dir_name[3:])
+                os.mkdir(dir_name )
+                shutil.move(i, dir_name)
+                shutil.move("README.md", dir_name)
         print(files)
 
     return file_count
