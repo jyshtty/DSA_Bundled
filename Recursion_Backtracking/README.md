@@ -1,6 +1,6 @@
-#BACKTRACKING
+# BACKTRACKING
 
-##Print Decreasing Number from 5 to 1
+## Print Decreasing Number from 5 to 1
 >Expectation
 >Input - print_decreasing(5)
 >Output -
@@ -19,6 +19,27 @@ def print_decresing(n):
       
      print(n)
      return print(n-1)
+```
+
+## Print Increasing Number from 1 to 5
+>Expectation
+>Input - print_increasing(5)
+>Output -
+>1
+>2
+>3
+>4
+>5
+>Faith - Let us assume print_increasing(4) works fine.
+>
+```python
+
+def print_increasing(n):
+     if n == 0:
+         return
+      
+     return print(n-1)
+     print(n)
 ```
 
 ```python
