@@ -34,7 +34,7 @@ def B():
 
 def C():
      line5
-'''
+```
 
 
 >when function A is called, Output is 
