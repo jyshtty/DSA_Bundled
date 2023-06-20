@@ -20,6 +20,29 @@ def print_decresing(n):
      print(n)
      return print(n-1)
 ```
+
+```python
+def A():
+     line1
+     B()
+     line2
+
+def B():
+     line3
+     C()
+     line4
+
+def C():
+     line5
+'''
+
+
+>when function A is called, Output is 
+>line1
+>line3
+>line5
+>line4
+>line2
  
 ##Simple Fibonacci 
 
