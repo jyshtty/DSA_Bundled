@@ -38,11 +38,11 @@ def C():
 
 
 >when function A is called, Output is 
->line1
->line3
->line5
->line4
->line2
+line1
+line3
+line5
+line4
+line2
  
 ##Simple Fibonacci 
 
