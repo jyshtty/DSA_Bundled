@@ -3,12 +3,12 @@
 ## Print Decreasing Number from 5 to 1
 >Expectation
 >Input - print_decreasing(5)
->Output -
->5
->4
->3
->2
->1
+Output -
+5
+4
+3
+2
+1
 >Faith - Let us assume print_decreasing(4) works fine.
 >
 ```python
