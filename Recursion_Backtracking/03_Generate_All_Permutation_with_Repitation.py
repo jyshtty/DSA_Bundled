@@ -1,4 +1,4 @@
-# Generate all permutation of [1,2,2]
+# Generate all permutation of [1,2,2] with repetation.
 
 def solve(arr):
     curr = [-1] * len(arr)
