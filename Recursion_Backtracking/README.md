@@ -94,6 +94,16 @@ print(sum(5))
         if n <= 1:
             return n
         return fibonacci(n-1) + fibonacci(n-2)
+
+n = 6
+dp = [0] * (n+1)
+def fibo(n):
+    if n <= 1:
+        return n
+    if dp[n]:
+        return dp[n]
+    dp[n] = fibo(n-1) + fibo(n-2)
+    return dp[n]
   ```
 
 ## check palindrome 
