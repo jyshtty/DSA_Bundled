@@ -95,10 +95,6 @@ print(sum(5))
         return fibonacci(n-1) + fibonacci(n-2)
   ```
 
-
-
-
-
 >Note - If you don't want to pop changed variable after backtracking call is returned simple change the variable in func call itself.
 for Ex -
 See generate parenthesis code.
