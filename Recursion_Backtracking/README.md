@@ -104,6 +104,20 @@ print(sum(5))
         if s[i] != s[n-i-1]: # instead of using 2 pointer this is an optimization. that is by using only one variable
              return False
         return palin(i+1)
+
+i = 0
+n = len(s)
+s = "MADAM"
+  ```
+
+## reverse String
+
+```python
+ def reverse(i):
+        if i >= n//2:
+            return True
+        s[i], s[n-i-1] = s[n-i-1], s[i] 
+        reverse(i+1)
   ```
 
 
