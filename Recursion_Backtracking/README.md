@@ -64,8 +64,29 @@ line3
 line5
 line4
 line2
- 
-##Simple Fibonacci 
+
+# Two ways how recursion is called.
+1. PARAMETERISED
+```python
+def sum_(n, sum):
+    if n < 1:
+        return sum
+    return sum_(n-1, sum+n)
+
+print(sum_(5,0))
+```
+
+2. FUNCTIONAL
+```python
+def sum(n):
+    if n == 0:
+        return 0
+    return n + sum(n-1)
+
+print(sum(5))
+```
+
+## Simple Fibonacci 
 
 ```python
  def fibonacci(n):
