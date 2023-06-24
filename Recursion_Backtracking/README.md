@@ -95,6 +95,18 @@ print(sum(5))
         return fibonacci(n-1) + fibonacci(n-2)
   ```
 
+## check palindrome 
+
+```python
+ def palin(i):
+        if i >= n//2:
+            return True
+        if s[i] != s[n-i-1]: # instead of using 2 pointer this is an optimization. that is by using only one variable
+             return False
+        return palin(i+1)
+  ```
+
+
 >Note - If you don't want to pop changed variable after backtracking call is returned simple change the variable in func call itself.
 for Ex -
 See generate parenthesis code.
