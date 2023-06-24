@@ -115,7 +115,7 @@ s = "MADAM"
 ```python
  def reverse(i):
         if i >= n//2:
-            return True
+            return 
         s[i], s[n-i-1] = s[n-i-1], s[i] 
         reverse(i+1)
   ```
