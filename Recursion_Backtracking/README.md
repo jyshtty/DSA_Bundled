@@ -1,18 +1,5 @@
 # BACKTRACKING
 
->
->asd
->as
->
->dsa
->d
->as
->dsa
->da
->sd
-
-
-
 ## Print Decreasing Number from 5 to 1
 >Expectation
 >Input - print_decreasing(5)
@@ -185,8 +172,34 @@ You are changing it only for the called function i.e in its parameter.
 Taking example of combination sum problem.
 
 1. Find all subsets whose sum is equal to the given target.
+> backtrack(target, data_structure, sum)
+> 
+>      if condition satisfies >> print data_structure
+>
+>      pick  >> backtrack = add elem to data_structure
+>  
+>      unpick  >> backtrack do not elem to data_structure
+
 
 2. Return only one subset whose sum is equal to given target or return true.
+> backtrack(target, data_structure, sum)
+> 
+>      if condition satisfies >> return true
+>
+>      if  backtrack = (pick  >> add elem to data_structure) == true return true
+>  
+>      if true - backtrack = (unpick do not elem to data_structure == true return true
 
-4. Count the number of subset whose sum is equal to target
+3. Count the number of subset whose sum is equal to target
+
+> backtrack(target, data_structure, sum)
+> 
+>      if condition satisfies >> return 1 else 0
+>
+>      r = backtrack = (pick  >> add elem to data_structure) 
+>  
+>      l = unpick  >> backtrack = do not elem to data_structure
+> 
+> return l + r
+
 
