@@ -33,8 +33,8 @@ class Solution:
             if i == len(s):
                 ans.append(curr.copy())
                 return
-            for j in range(i, len(s)):
-                if self.isPalin(i, j, s):
+            for j in range(i, len(s)):   #this is very important step. you are iterating from i=0 to len(s). 
+                if self.isPalin(i, j, s):   
                     curr.append(s[i: j + 1])
                     backtracking(j + 1)
                     curr.pop()
