@@ -205,8 +205,11 @@ Taking example of combination sum problem.
 > N Queen Pattern
 >
 > s = 0
+> 
 > for i in arr:
+> 
 >      s     += 1
+>
 > return s
 
 
