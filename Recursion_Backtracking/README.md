@@ -1,5 +1,18 @@
 # BACKTRACKING
 
+>
+>asd
+>as
+>
+>dsa
+>d
+>as
+>dsa
+>da
+>sd
+
+
+
 ## Print Decreasing Number from 5 to 1
 >Expectation
 >Input - print_decreasing(5)
