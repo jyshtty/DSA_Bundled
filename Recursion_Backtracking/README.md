@@ -167,3 +167,13 @@ stack.pop()
 It works because when you get back the control to the calling function, the stack value is still the same.
 You are changing it only for the called function i.e in its parameter.
 
+
+# 3 Pattern of Backtracking Problem - Very Important while solving DP problems.
+Taking example of combination sum problem.
+
+1. Find all subsets whose sum is equal to the given target.
+
+2. Return only one subset whose sum is equal to given target or return true.
+
+4. Count the number of subset whose sum is equal to target
+
