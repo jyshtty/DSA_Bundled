@@ -265,14 +265,14 @@ print(obj.combinationSum([1,2,3,4,5,6], 5))
 > 
 >      return l + r
 > 
-> N Queen Pattern
+>      N Queen Pattern
 >
-> s = 0
+>      s = 0
 > 
-> for i in arr:
+>      for i in arr:
 > 
->      s     += 1
+>      s+= 1
 >
-> return s
+>      return s
 
 
