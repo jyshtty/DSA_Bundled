@@ -172,6 +172,26 @@ You are changing it only for the called function i.e in its parameter.
 Taking example of combination sum problem.
 
 1. Find all subsets whose sum is equal to the given target.
+```python
+class Solution:
+    def combinationSum(self, candidates, target):
+        ans = []
+
+        def backtrack(index, sum, temp):
+            if index == len(candidates) or sum > target:
+                return
+            if sum == target:
+                ans.append(temp.copy())
+                return
+            temp.append(candidates[index])
+            backtrack(index, sum + candidates[index], temp)
+            temp.pop()
+            backtrack(index + 1, sum, temp)
+
+        backtrack(0, 0, [])
+        return ans
+```
+
 > backtrack(target, data_structure, sum)
 > 
 >      if condition satisfies >> print data_structure
@@ -182,6 +202,28 @@ Taking example of combination sum problem.
 
 
 2. Return only one subset whose sum is equal to given target or return true.
+
+```python
+class Solution:
+    def combinationSum(self, candidates, target):
+        ans = []
+
+        def backtrack(index, sum, temp):
+            if index == len(candidates) or sum > target:
+                return False
+            if sum == target:
+                ans.append(list(temp))
+                return True
+            temp.append(candidates[index])
+            if backtrack(index + 1, sum + candidates[index], temp):
+                return True
+            temp.pop()
+            if backtrack(index + 1, sum, temp):
+                return True
+
+        if backtrack(0, 0, []):
+            return ans
+```
 > backtrack(target, data_structure, sum)
 > 
 >      if condition satisfies >> return true
@@ -191,6 +233,27 @@ Taking example of combination sum problem.
 >      if true - backtrack = (unpick do not elem to data_structure == true return true
 
 3. Count the number of subset whose sum is equal to target
+
+```python
+class Solution:
+    def combinationSum(self, candidates, target):
+        ans = []
+        def backtrack(index, sum, temp):
+            if index == len(candidates) or sum > target:
+                return 0
+            if sum == target:
+                ans.append(list(temp))
+                return 1
+            temp.append(candidates[index])
+            l =  backtrack(index + 1, sum + candidates[index], temp)
+            temp.pop()
+            r = backtrack(index + 1, sum, temp)
+            return l + r
+        return backtrack(0, 0, [])
+
+obj = Solution()
+print(obj.combinationSum([1,2,3,4,5,6], 5))
+```
 
 > backtrack(target, data_structure, sum)
 > 
