@@ -1,5 +1,14 @@
 # BACKTRACKING
 
+## Trick
+1. For most of the probelm will have index as parameter, decide what to pass as index. For N queen, Row number is index.
+2. Usually base case will have index == something. As we are incrementing index for every funtion call.
+3. A data_structure is carried along function call as another parameter. We append a value to be before the backtracking call and pop the value after backtracking call. This data structure is usually printed once base case is met.
+       1. In case of permutation, this data structure is curr = [-1] * len(s)
+       2. In case of subsets, this data structure is curr = []
+4. After 1-3 is taken care, decide upon the number of parameter that you need to pass to function.
+5. Decide how many function calls
+
 ## Print Decreasing Number from 5 to 1
 >Expectation
 >Input - print_decreasing(5)
