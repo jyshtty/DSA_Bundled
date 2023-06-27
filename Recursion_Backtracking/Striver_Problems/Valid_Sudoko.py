@@ -1,4 +1,4 @@
-
+# Not Backtracking.
 # Very simple - Check Neetcode explanation.
 # Understand the question. They are just asking if any of already filled number is contradicting.
 import collections
