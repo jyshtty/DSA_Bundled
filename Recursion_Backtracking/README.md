@@ -261,8 +261,8 @@ class Solution:
 
             else:
                 return False
-        backtrack(mat, 0, 0)
-        return mat
+        if backtrack(mat, 0, 0):
+               return mat
 ```
 > backtrack(target, data_structure, sum)
 > 
