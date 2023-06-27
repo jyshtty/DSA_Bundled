@@ -1,3 +1,9 @@
+# Problem Description
+# Given a grid A, a rat is at position (1, 1). He wants to go to the position (n, n) where n is size of the square matrix A.
+# 1 represents a traversable cell and 0 represents a non-traversable cell. Rat can only move right or down.
+# Return a path that the rat can take.
+
+
 class Solution:
     # @param A : list of list of integers
     # @return a list of list of integers
