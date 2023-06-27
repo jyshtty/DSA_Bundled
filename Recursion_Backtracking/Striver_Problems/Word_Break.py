@@ -16,6 +16,7 @@
 # The string can be segmented as "i like samsung" 
 # or "i like sam sung".
 
+link = '<a href="https://www.geeksforgeeks.org/word-break-problem-dp-32/">Click here</a>'
 
 
 class Solution:
