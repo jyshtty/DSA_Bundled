@@ -1,6 +1,12 @@
 # Not Backtracking.
 # Very simple - Check Neetcode explanation.
 # Understand the question. They are just asking if any of already filled number is contradicting.
+
+# Keep 3 hash maps where value is a set - cols, rows, squares
+# if you divide row//3 and col//3 and keep tuple of result as key to the squares hashamp,
+# ex - if row,col is 5,5 - squares[(2,2)] = set(1,2,3)
+
+
 import collections
 
 class Solution:
