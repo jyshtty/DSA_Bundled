@@ -1,5 +1,5 @@
 
-# NEARESST SMALLEST LEFT
+1.  NEAREST SMALLEST LEFT
 
 ``` python
 
@@ -19,5 +19,6 @@ def nearest_smallest_left(arr):
         stack.append(num)
 
     return result
-
 ```
+
+
