@@ -1,4 +1,6 @@
-``` def nearest_smallest_left(arr):
+``` python
+
+def nearest_smallest_left(arr):
     stack = []
     result = []
 
@@ -14,3 +16,5 @@
         stack.append(num)
 
     return result
+
+```
