@@ -94,6 +94,8 @@ def solve(N):
 print(solve(3))
 ```
 
+```
+
 
                           generate(0)
                          /          \
@@ -104,6 +106,8 @@ print(solve(3))
       generate(2)   generate(2) generate(2) generate(2)
        /     \        /    \      /    \       /    \
  [0,0,0] [0,0,1] [0,1,0] [0,1,1] [1,0,0] [1,0,1] [1,1,0] [1,1,1]
+
+ ```
 
 
 
