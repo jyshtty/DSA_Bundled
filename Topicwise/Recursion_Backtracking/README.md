@@ -74,6 +74,39 @@ line5
 line4
 line2
 
+# Flow Diagram
+
+```python
+def solve(N):
+    curr = [-1] * N
+    ans = []
+    def generate(index):
+        if index == N:
+            ans.append(curr.copy())
+            return
+        curr[index] = 0
+        generate(index+1)
+        curr[index] = 1
+        generate(index+1)
+    generate(0)
+    return ans
+
+print(solve(3))
+```
+
+
+                          generate(0)
+                         /          \
+                [0, _, _]            [1, _, _]
+               generate(1)          generate(1)
+              /          \         /           \
+       [0,0,_]        [0,1,_]   [1,0,_]     [1,1,_]
+      generate(2)   generate(2) generate(2) generate(2)
+       /     \        /    \      /    \       /    \
+ [0,0,0] [0,0,1] [0,1,0] [0,1,1] [1,0,0] [1,0,1] [1,1,0] [1,1,1]
+
+
+
 # Two ways how recursion is called.
 1. PARAMETERISED
 ```python
