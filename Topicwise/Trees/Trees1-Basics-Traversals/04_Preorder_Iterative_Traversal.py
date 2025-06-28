@@ -38,6 +38,8 @@ def iterativePreorder(root):
         if node.left is not None:
             nodeStack.append(node.left)
 
+
+# Idea is stack.pop always gives previous node when the curr.left is none.
 def preorderApproach2(root):
     stack = []
     curr = root
