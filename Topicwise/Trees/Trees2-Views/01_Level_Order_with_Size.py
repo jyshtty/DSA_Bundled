@@ -20,7 +20,7 @@ class Solution:
             queue.append(A)
         while queue:
             size = len(queue)
-            curr = []
+            curr = [] # stores nodes data at current level
             for i in range(size):
                 temp = queue.popleft()
                 if temp.left:
