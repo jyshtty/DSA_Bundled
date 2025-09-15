@@ -1,4 +1,8 @@
 # Binary Tree Problems – LeetCode Study Guide
+## HINTS
+
+1. Always remember the return type. Same should be present in base as well as every return statement.
+2. 
 
 This repository contains solutions to common **Binary Tree** problems on LeetCode.  
 Each entry includes the problem (linked), difficulty, a short hint, and a link to the local solution file.
@@ -11,6 +15,7 @@ Each entry includes the problem (linked), difficulty, a short hint, and a link t
 |---------|----------|------------|------|---------------|
 | 1 | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) | Easy | Recursively or iteratively swap left and right child nodes. | [01_invert_binary_tree.py](01_invert_binary_tree.py) |
 | 2 | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | Easy | Depth = `1 + max(depth(left), depth(right))`. | [02_max_depth_of_binary_tree.py](02_max_depth_of_binary_tree.py) |
+| 2.1 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | Easy | Handle - If one child is None, we must go through the other coz min is always 0 in base case.   | [02_max_depth_of_binary_tree.py](02_max_depth_of_binary_tree.py) |
 | 3 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | Easy | Track `max(leftDepth + rightDepth)` at each node. | [03_diameter_of_binary_tree.py](03_diameter_of_binary_tree.py) |
 | 4 | [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/) | Easy | Check if subtrees are balanced and height difference ≤ 1. | [04_balanced_binary_tree.py](04_balanced_binary_tree.py) |
 | 5 | [Same Tree](https://leetcode.com/problems/same-tree/) | Easy | Recursively check structure and values of both trees. | [05_same_tree.py](05_same_tree.py) |
