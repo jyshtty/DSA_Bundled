@@ -26,6 +26,11 @@ class Solution:
                 self.dfs(adj_list, visited, i)
                 count = count + 1
 
+        # in a binary tree with n nodes, there will be n-1 edges.
+        # if it is greater than n-1, then we can assure that there is a cycle in it.
+        # same thing holds true for a graph. i.e for a graph with n nodes and single component - if edges is greater than n-1, then there is cycle
+        # if there are 2 component, if edges is greate than n-2 (n1 - 1 and n2 - 1) - there is a cycle
+        # therefore we can derive - for c component if e > A - c, there is a cycle.
         e = len(B)
         if e == A - count:
             return 0, count
