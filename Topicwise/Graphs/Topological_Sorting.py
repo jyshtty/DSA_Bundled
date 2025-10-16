@@ -6,7 +6,7 @@ class Solution:
     def solve(self, A, B):
         indegree = [0] * (A + 1)
         indegree[0] = float("inf")
-        adj = [[0] for i in range((A + 1))]
+        adj = [[] for i in range((A + 1))]
         for i in B:
             adj[i[0]].append(i[1])
             indegree[i[1]] += 1
