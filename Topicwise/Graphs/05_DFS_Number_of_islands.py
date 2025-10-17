@@ -1,3 +1,33 @@
+# Given a 2D matrix A of dimensions N x M consisting of 0s and 1s.
+# A group of connected 1s forms an island. From a cell (i, j), we can visit any cell among the 4 cells surrounding it if that cell has value 1.
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+
+        row = len(grid)
+        col = len(grid[0])
+
+        def dfs(r,c):
+            if r < 0 or c < 0 or r >= row or c >= col or grid[r][c] == '0':
+                return
+            
+            grid[r][c] = '0'
+            dfs(r-1,c)
+            dfs(r,c+1)
+            dfs(r+1,c)
+            dfs(r,c-1)
+            
+
+        count = 0
+
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == '1':
+                    count += 1
+                    dfs(i,j)
+        
+        return count
+
 # (i-1, j) if (i-1, j) is inside the matrix and A[i-1][j] = 1.
 # (i, j-1) if (i, j-1) is inside the matrix and A[i][j-1] = 1.
 # (i+1, j) if (i+1, j) is inside the matrix and A[i+1][j] = 1.

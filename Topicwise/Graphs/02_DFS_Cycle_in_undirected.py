@@ -1,4 +1,4 @@
-# Find number of connected links
+# same program for number of connected items.
 # and if total edges = total nodes - connected components: Acyclic
 
 class Solution:
