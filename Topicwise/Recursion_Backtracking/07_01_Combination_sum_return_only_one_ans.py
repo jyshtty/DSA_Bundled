@@ -1,3 +1,8 @@
+# Combination Sum - return only one answer
+# # # Example: candidates = [1,2,3,4,5,6], target = 5
+# # # Output: [[2,3]]   <--- only one combination is needed as output
+# # # Explanation: The combination [2,3] is the only one that adds up to 5.
+
 class Solution:
     def combinationSum(self, candidates, target):
         ans = []

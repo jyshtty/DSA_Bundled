@@ -1,3 +1,7 @@
+# Combination Sum - return all possible combinations
+# # # Example: candidates = [1,2,3,4,5,6], target = 5
+# # # Output: [[5], [1,4], [2,3], [1,2,2], [1,1,3], [1,1,1,2], [1,1,1,1,1]]     
+
 class Solution:
     def combinationSum(self, candidates, target):
         ans = []

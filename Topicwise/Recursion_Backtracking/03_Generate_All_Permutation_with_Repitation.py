@@ -1,4 +1,6 @@
 # Generate all permutation of [1,2,2] with repetation.
+# # # Example: arr = [1,2,2]
+# # # Output: [[1,2,2], [2,1,2], [2,2,1]]   
 
 from collections import Counter
 

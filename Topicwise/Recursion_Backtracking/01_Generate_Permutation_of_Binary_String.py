@@ -1,4 +1,7 @@
 # Generate Permutation of binary string of size N
+# # Example: N=3
+# # Output: ["000", "001", "010", "011", "100", "101", "110", "111"]
+
 
 def solve(N):
     curr = [-1] * N

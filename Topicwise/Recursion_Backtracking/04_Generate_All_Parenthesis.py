@@ -1,3 +1,7 @@
+# Generate All Parenthesis
+# # # Example: n = 3
+# # # Output: ["((()))", "(()())", "(())()", "()(())", "()()()"]    
+
 class Solution:
     def generateParenthesis(self, n):
         stack = []
