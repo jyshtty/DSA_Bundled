@@ -21,6 +21,8 @@ class Solution:
             temp.append(candidates[index])
             backtrack(index + 1, sum + candidates[index], temp)
             temp.pop()
+            # In combinationSum2, we must ensure we never reuse the same number again at the same level.
+            # therefor we use while
             while index + 1 < len(candidates) and candidates[index] == candidates[index + 1]:
                 index += 1
             backtrack(index + 1, sum, temp)
