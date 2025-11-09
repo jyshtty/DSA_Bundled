@@ -1,3 +1,4 @@
+
 class Solution:
     def exist(self, board, word):
         row = len(board)
@@ -9,7 +10,7 @@ class Solution:
                 return True
             if (r < 0 or c < 0 or
                     r > row - 1 or c > col - 1 or
-                    board[r][c] != word[i] 
+                    board[r][c] != word[i] or
                     (r, c) in visited): # to avoid circle. To avoid same position twice
                 return False
 
