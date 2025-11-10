@@ -33,6 +33,8 @@ class Solution:
     def solveNQueens(self, n):
         matrix = [["." for i in range(n)] for j in range(n)]
         col = [False] * n
+        # diagonal (↙↗ or ↘↖) in an n × n chessboard represents a unique line across the board.
+        # There are a total of 2n - 1 such diagonals in each direction.
         left_diag = [False] * (2 * n - 1)
         right_diag = [False] * (2 * n - 1)
         ans = []
@@ -44,6 +46,7 @@ class Solution:
                 ans.append(temp)
             for column in range(n):
                 if col[column] == False and left_diag[r - column + n - 1] == False and right_diag[r + column] == False:
+                    # safe to place queen
                     matrix[r][column] = 'Q'
 
                     col[column] = True
