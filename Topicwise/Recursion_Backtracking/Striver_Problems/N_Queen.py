@@ -42,8 +42,9 @@ class Solution:
         def backtrack(r, matrix, col, left_diag, right_diag):
             if r == n:
                 temp = ["".join(x) for x in matrix]
-
                 ans.append(temp)
+                return 
+                
             for column in range(n):
                 if col[column] == False and left_diag[r - column + n - 1] == False and right_diag[r + column] == False:
                     # safe to place queen
