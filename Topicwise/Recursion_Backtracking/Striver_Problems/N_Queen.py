@@ -1,3 +1,34 @@
+# N-Queens Problem
+# Problem Statement: Place N queens on an N x N chessboard such that no two queens threaten each other.
+# A queen can attack another queen if they are in the same row, column, or diagonal.
+# The solution should return all distinct configurations of the board where the queens are placed safely.
+
+# Example usage:
+# sol = Solution()
+# print(sol.solveNQueens(4))    
+
+# input: 4
+# output: [
+#  [".Q..",
+#   "...Q",
+#   "Q...",
+#   "..Q."],
+#  ["..Q.",
+#   "Q...",
+#   "...Q",
+#   ".Q.."]
+# ]
+# Each solution contains a distinct board configuration of the N-Queens' placement.
+# The '.' character indicates an empty square, and 'Q' indicates a queen.
+# The solution should return all distinct configurations of the board where the queens are placed safely.
+# No two queens should threaten each other.
+# The order of the solutions does not matter.
+# You may return the answer in any order.
+# Constraints:
+# 1 <= n <= 9
+# Follow up: Could you solve the problem using bit manipulation to optimize the space complexity?
+
+
 class Solution:
     def solveNQueens(self, n):
         matrix = [["." for i in range(n)] for j in range(n)]

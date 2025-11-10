@@ -32,6 +32,7 @@ class Solution:
                     (r, c) in visited): # to avoid circle. To avoid same position twice.
                 return False
 
+            # definitely board[r][c] == word[i] below. hence we increment i.
             visited.add((r, c)) # Mark the cell as visited
             res = (backtrack(r + 1, c, i + 1) or # Explore all 4 directions
                    backtrack(r - 1, c, i + 1) or
