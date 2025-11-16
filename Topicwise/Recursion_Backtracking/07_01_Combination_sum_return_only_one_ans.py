@@ -8,11 +8,10 @@ class Solution:
         ans = []
 
         def backtrack(index, sum):
+            if sum == target:
+                return True
             if index == len(candidates) or sum > target:
                 return False
-            if sum == target:
-                ans.append(list(temp))
-                return True
             if backtrack(index + 1, sum + candidates[index]):
                 return True
             if backtrack(index + 1, sum):
