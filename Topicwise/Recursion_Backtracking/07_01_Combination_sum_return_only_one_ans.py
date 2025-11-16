@@ -7,17 +7,15 @@ class Solution:
     def combinationSum(self, candidates, target):
         ans = []
 
-        def backtrack(index, sum, temp):
+        def backtrack(index, sum):
             if index == len(candidates) or sum > target:
                 return False
             if sum == target:
                 ans.append(list(temp))
                 return True
-            temp.append(candidates[index])
-            if backtrack(index + 1, sum + candidates[index], temp):
+            if backtrack(index + 1, sum + candidates[index]):
                 return True
-            temp.pop()
-            if backtrack(index + 1, sum, temp):
+            if backtrack(index + 1, sum):
                 return True
 
         if backtrack(0, 0, []):
