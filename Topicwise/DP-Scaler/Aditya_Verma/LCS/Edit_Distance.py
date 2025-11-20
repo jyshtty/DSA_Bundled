@@ -17,18 +17,18 @@ class Solution:
         if not l1 or not l2:
             return max(l1, l2)
 
-        dp = [[0 for j in range(l2 + 1)] for i in range(l1 + 1)]
+        dp = [[0 for j in range(l2 + 1)] for i in range(l1 + 1)] # dp[i][j] represents min operations to convert word1[0..i-1] to word2[0..j-1]
 
         for i in range(l1 + 1):
             for j in range(l2 + 1):
                 if i == 0 and j == 0:
-                    dp[i][j] = 0
+                    dp[i][j] = 0 # both strings are empty
                 elif i == 0:
-                    dp[0][j] = j
+                    dp[0][j] = j # insert all characters of word2
                 elif j == 0:
-                    dp[i][0] = i
+                    dp[i][0] = i # delete all characters of word1
                 elif word1[i - 1] == word2[j - 1]:
-                    dp[i][j] = dp[i - 1][j - 1]
+                    dp[i][j] = dp[i - 1][j - 1] # characters match, no operation needed
                 else:
                     insert_op = 1 + dp[i][j - 1]
                     delete_op = 1 + dp[i - 1][j]
