@@ -1,4 +1,4 @@
-# Make sure you check target == sum before you check index == len(candidates)
+# Make sure you check target == sum before you check index == len(candidates).
 
 
 # # Combination Sum II - each number can be used only once
@@ -25,6 +25,7 @@ class Solution:
             # therefor we use while
             while index + 1 < len(candidates) and candidates[index] == candidates[index + 1]:
                 index += 1
+    
             backtrack(index + 1, sum, temp)
 
         backtrack(0, 0, [])

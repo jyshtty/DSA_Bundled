@@ -1,4 +1,8 @@
-# Combination Sum - return all possible combinations
+# Combination Sum - count all unique combinations in candidates where the candidate numbers sums to target.
+# Each number in candidates may only be used once in the combination.
+# Note: The solution set must not contain duplicate combinations.
+# # # Leetcode Link: https://leetcode.com/problems/combination-sum-ii/
+
 # # # Example: candidates = [1,2,3,4,5,6], target = 5
 # # # Output: [[5], [1,4], [2,3], [1,2,2], [1,1,3], [1,1,1,2], [1,1,1,1,1]]     
 
