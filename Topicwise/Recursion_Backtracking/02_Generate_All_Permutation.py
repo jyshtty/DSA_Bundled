@@ -8,15 +8,16 @@ def solve(arr):
     ans = []
     def generate(index):
         if index == len(curr):
-            ans.append(curr)
+            ans.append(curr.copy())
         for i in range(len(arr)):
             flag = 0
-            for j in range(index):
-                if curr[j] == arr[i]:
-                    flag = 1
+            for j in range(index): # check if arr[i] is already used
+                if curr[j] == arr[i]: # already used
+                    flag = 1 
                     break
-            if flag == 0:
-                curr[index] = arr[i]
-                generate(index+1)
+            if flag == 0: # not used
+                curr[index] = arr[i] # place arr[i] at index
+                generate(index+1) # recurse for next index
+                # no need to unmark, as we are overwriting in next iteration
     generate(0)
     return ans

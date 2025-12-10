@@ -24,15 +24,15 @@ class Solution:
                 if i == 0 and j == 0:
                     dp[i][j] = 0 # both strings are empty
                 elif i == 0:
-                    dp[0][j] = j # insert all characters of word2
+                    dp[0][j] = j # insert all characters of word2 to word1
                 elif j == 0:
-                    dp[i][0] = i # delete all characters of word1
+                    dp[i][0] = i # delete all characters of word1 to match empty word2
                 elif word1[i - 1] == word2[j - 1]:
                     dp[i][j] = dp[i - 1][j - 1] # characters match, no operation needed
                 else:
-                    insert_op = 1 + dp[i][j - 1]
-                    delete_op = 1 + dp[i - 1][j]
-                    replace_op = 1 + dp[i - 1][j - 1]
+                    insert_op = 1 + dp[i][j - 1] # insert character from word2 to word1 
+                    delete_op = 1 + dp[i - 1][j] # delete character from word1
+                    replace_op = 1 + dp[i - 1][j - 1] # replace character in word1
                     dp[i][j] = min(insert_op, delete_op, replace_op)
         print(dp)
         return dp[l1][l2]
