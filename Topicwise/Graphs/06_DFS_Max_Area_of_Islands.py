@@ -1,3 +1,6 @@
+# we have used visited array.
+# you can also reuse grid and make it '0' to mark it as visited, as shown in number of island quesiton.
+
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         ROWS, COLS = len(grid), len(grid[0])
