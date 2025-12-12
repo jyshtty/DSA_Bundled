@@ -1,27 +1,38 @@
 
 
 from collections import deque
+
+
 class Solution:
     def solve(self, A, B):
-        graph = [[] for i in range(A)]
-        for i in B:
-            graph[i[0]].append(i[1])
-            graph[i[1]].append(i[0])
-        color = [0 for i in range(A)]
+        """Check if the undirected graph with A nodes and edge list B is bipartite.
+
+        Returns 1 if bipartite, else 0.
+        """
+        graph = [[] for _ in range(A)]
+        for edge in B:
+            u, v = edge
+            graph[u].append(v)
+            graph[v].append(u)
+
+        color = [0] * A  # 0 = unvisited, 1 and 2 are two colours
         q = deque()
 
-        for i in range(A):
-            if color[i] == 0:
-                q.append(i)
-                color[i] = 1
+        for node in range(A):
+            # start BFS from this connected component
+            if color[node] == 0:
+                q.append(node)
+                color[node] = 1 # colour with 1
+            
             while q:
                 u = q.popleft()
-                for i in range(len(graph[u])):
-                    v = graph[u][i]
+                for v in graph[u]:
                     if color[v] == 0:
-                        color[v] = 3 - color[u] # all the edges you will color the opposite color. if color[u] = 2, color[v] = 1 lly if color[u] = 1, color [v] = 2. ytherefor color[v] = 3 - color[u]
+                        # color with opposite colour (1 <-> 2)
+                        color[v] = 3 - color[u]
                         q.append(v)
                     elif color[v] == color[u]:
+                        # adjacent nodes have same colour -> not bipartite
                         return 0
         return 1
 

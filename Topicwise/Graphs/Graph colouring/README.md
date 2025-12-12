@@ -25,5 +25,3 @@ graph = [ [1, 2], [0, 3], [0, 3], [1, 2] ]  # 4-vertex even cycle -> bipartite
 - Time: O(V + E)
 - Space: O(V)
 
-## Next steps
-- I can add a short test harness or unit tests for this implementation.
