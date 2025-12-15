@@ -27,16 +27,16 @@ class Solution:
         heap = []
         heapify(heap)
 
-        heappush(heap, (0, C))
+        heappush(heap, (0, C))  # (distance, node) i.e dis to node source C is 0
         distance[C] = 0
         while heap:
             cur_dist, cur_node = heappop(heap)
 
-            if cur_dist == distance[cur_node]:          # outdated heap entries are ignored
+            if cur_dist == distance[cur_node]:          # outdated heap entries are ignored i.e if we have already found a better distance for cur_node, we skip processing it. 
                 for neighbor, weight in graph[cur_node]:
                     if distance[cur_node] + weight < distance[neighbor]:
                         distance[neighbor] = distance[cur_node] + weight
-                        heappush(heap, (distance[neighbor], neighbor))
+                        heappush(heap, (distance[neighbor], neighbor)) # out of all the unblased nodes, pick the one with minimum distance. So we use min-heap so that we can get the node with minimum distance comes on top
         for i in range(len(distance)):
             if distance[i] == float("inf"):
                 distance[i] = -1
