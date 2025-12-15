@@ -43,10 +43,11 @@ class Solution:
 
         return distance
 
-    if __name__ == "__main__": 
-        obj = Solution()
-        A = 6
-    B =[
+
+if __name__ == "__main__": 
+    obj = Solution()
+    A = 6
+    B = [
         [0, 4, 9],
         [3, 4, 6],
         [1, 2, 1],
@@ -57,5 +58,5 @@ class Solution:
         [4, 5, 7],
         [0, 5, 1]
     ]
-    C= 4
-print(obj.solve(A, B, C))
+    C = 4
+    print(obj.solve(A, B, C))
