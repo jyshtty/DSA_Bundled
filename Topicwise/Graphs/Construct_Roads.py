@@ -3,7 +3,7 @@ class Solution:
     # @param B : list of list of integers
     # @return an integer
     def solve(self, A, B):
-        graph = [[] for i in range(A+1)]
+        graph = [[] for _ in range(A+1)]
         indegree = [0 for i in range(A + 1)]
 
         for i in B:
