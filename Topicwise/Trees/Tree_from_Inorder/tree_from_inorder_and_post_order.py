@@ -1,3 +1,7 @@
+# changes from tree_from_inorder_and_pre_order.py
+# 1. postorder - we will be popping from the end
+# 2. so we will be constructing right subtree first and then left subtree      
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
