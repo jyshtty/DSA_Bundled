@@ -2,7 +2,8 @@
 ## HINTS
 
 1. Always remember the return type. Same should be present in base as well as every return statement.
-2. 
+2. max dpeth of bt -- > diameter of bt then -- > balannced binary tree
+3. diameter of bt is same maximum path sum
 
 This repository contains solutions to common **Binary Tree** problems on LeetCode.  
 Each entry includes the problem (linked), difficulty, a short hint, and a link to the local solution file.
