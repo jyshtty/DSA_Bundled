@@ -16,6 +16,10 @@
 # We then check if there exists a prefix sum that when subtracted from the current prefix sum gives B.
 # If such a prefix sum exists, we return the subarray from the index after that prefix sum to the current index.
 # If no such subarray is found, we return [-1]. 
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+
+# Implementation: 
 
 
 class Solution:

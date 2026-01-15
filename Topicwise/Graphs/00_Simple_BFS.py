@@ -1,3 +1,13 @@
+# Graph BFS
+# Given a directed graph with A nodes and B edges, check if node A is reachable from node 1.
+# Approach: BFS
+# Start BFS from node 1, mark visited nodes.
+# If node A is visited, return 1, else 0.
+# Time Complexity: O(V + E)
+# Space Complexity: O(V)
+
+# Implementation:
+
 class Solution:
     # @param A : integer
     # @param B : list of list of integers

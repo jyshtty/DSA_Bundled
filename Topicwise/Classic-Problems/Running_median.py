@@ -1,3 +1,14 @@
+# Running Median
+# Given an array of integers, find the median after each insertion (simulated).
+# Approach: Two Heaps
+# Use a max heap for the lower half and a min heap for the upper half.
+# Balance the heaps to ensure the size difference is at most 1.
+# The median is the top of the max heap.
+# Time Complexity: O(n log n)
+# Space Complexity: O(n)
+
+# Implementation:
+
 # Steps 
 # 1. # create left dabba, # create right dabba
 # 2. # make sure everything of left dabba is less than right
