@@ -1,19 +1,21 @@
+# Given an array A of integers and an integer B, find and return the first continuous subarray which adds to B.
+# If the answer does not exist return an array with a single element -1.
 class Solution:
-    # @param A : list of integers
-    # @return an integer
     def solve(self, A, B):
-        sum = 0
-        prefix_array = [0] * len(A)
+        prefix_map = {0: -1}
+        curr_sum = 0
+
         for i in range(len(A)):
-            sum = sum + A[i]
-            prefix_array[i] = sum
-        dict01 = {0:-1}
-        for i in range(len(prefix_array)):
-            if (prefix_array[i] - B) not in dict01:
-                dict01[prefix_array[i]] = i
-            else:
-                return   A [ (dict01[prefix_array[i] - B] + 1) :i+1]
+            curr_sum += A[i]
+
+            if curr_sum - B in prefix_map:
+                return A[prefix_map[curr_sum - B] + 1 : i + 1]
+
+            if curr_sum not in prefix_map:
+                prefix_map[curr_sum] = i
+
         return [-1]
+
 
 if __name__ == "__main__":
     A = [1, 2, 3, 4, 5]
