@@ -1,3 +1,10 @@
+# Selection Sort
+# Sort an array in ascending order using selection sort.
+# Approach: For each position, find the minimum in the remaining array and swap.
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+# Implementation:
+
 arr = [5,4,3,2,1]
 def selection_sort(arr):
     for i in range(len(arr)):

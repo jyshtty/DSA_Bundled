@@ -1,3 +1,10 @@
+# Bubble Sort
+# Sort an array in ascending order using bubble sort.
+# Approach: Repeatedly swap adjacent elements if they are in wrong order.
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+# Implementation:
+
 def bubble_sort(arr):
     for i in range(len(arr)):
         for j in range(0, (len(arr)-1-i)):
