@@ -1,3 +1,15 @@
+# leetcode 22: Generate Parentheses
+# Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+# https://leetcode.com/problems/generate-parentheses/
+# Example 1:
+# Input: n = 3
+# Output: ["((()))","(()())","(())()","()(())","()()()"]
+# Approach: Backtracking
+# Time Complexity: O(4^n / sqrt(n))
+# Space Complexity: O(4^n / sqrt(n))
+# Implementation:
+
+
 class Solution:
     def generate_parenthesis(self, n):
         # only add open parenthesis if open < n

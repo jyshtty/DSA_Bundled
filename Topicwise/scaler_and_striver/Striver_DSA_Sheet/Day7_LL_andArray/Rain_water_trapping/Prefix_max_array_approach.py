@@ -1,3 +1,15 @@
+# leetcode 42: Trapping Rain Water
+# Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+# https://leetcode.com/problems/trapping-rain-water/
+# Example 1:
+# Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+# Output: 6
+# Approach: Prefix max arrays
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+# Implementation:
+
+
 # TC - O(n) + O(n) + O(n) = O(N)
 # SC - O(2N)
 

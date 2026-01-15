@@ -1,3 +1,15 @@
+# leetcode 234: Palindrome Linked List
+# Given the head of a singly linked list, return true if it is a palindrome.
+# https://leetcode.com/problems/palindrome-linked-list/
+# Example 1:
+# Input: head = [1,2,2,1]
+# Output: true
+# Approach: Find middle, reverse second half, compare
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val

@@ -1,3 +1,16 @@
+# leetcode 141: Linked List Cycle
+# Given head, the head of a linked list, determine if the linked list has a cycle in it.
+# There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.
+# https://leetcode.com/problems/linked-list-cycle/
+# Example 1:
+# Input: head = [3,2,0,-4], pos = 1
+# Output: true
+# Approach: Fast and slow pointers
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 #Approach 1
 class Solution:
     def hasCycle(self, head):

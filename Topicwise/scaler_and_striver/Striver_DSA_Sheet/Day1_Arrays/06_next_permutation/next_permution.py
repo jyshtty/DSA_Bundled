@@ -1,3 +1,16 @@
+# leetcode 31: Next Permutation
+# Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
+# If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).
+# https://leetcode.com/problems/next-permutation/
+# Example 1:
+# Input: nums = [1,2,3]
+# Output: [1,3,2]
+# Approach: Find the first decreasing element from right, swap with next greater, reverse the rest
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 def next_permutation(a):
     s = str(a)
     r = 0

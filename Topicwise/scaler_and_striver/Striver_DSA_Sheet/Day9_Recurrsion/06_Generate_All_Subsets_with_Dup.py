@@ -1,3 +1,16 @@
+# leetcode 90: Subsets II
+# Given an integer array nums that may contain duplicates, return all possible subsets (the power set).
+# The solution set must not contain duplicate subsets. Return the solution in any order.
+# https://leetcode.com/problems/subsets-ii/
+# Example 1:
+# Input: nums = [1,2,2]
+# Output: [[],[1],[1,2],[1,2,2],[2],[2,2]]
+# Approach: Backtracking with sorting
+# Time Complexity: O(2^n)
+# Space Complexity: O(2^n)
+# Implementation:
+
+
 # Approach
 # 1. Sort the  array
 # 2. Do a func call for # All subsets that include nums[i]

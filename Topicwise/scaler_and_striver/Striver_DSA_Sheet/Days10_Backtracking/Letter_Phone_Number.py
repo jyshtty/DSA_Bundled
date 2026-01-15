@@ -1,3 +1,15 @@
+# leetcode 17: Letter Combinations of a Phone Number
+# Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+# https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+# Example 1:
+# Input: digits = "23"
+# Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+# Approach: Backtracking
+# Time Complexity: O(3^n * 4^m) where n is number of digits with 3 letters, m with 4
+# Space Complexity: O(3^n * 4^m)
+# Implementation:
+
+
 class Solution:
     def letterCombinations(self, digits):
         if not digits:

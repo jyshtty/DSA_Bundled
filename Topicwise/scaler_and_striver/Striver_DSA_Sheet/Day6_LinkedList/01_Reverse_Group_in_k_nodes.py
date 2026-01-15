@@ -1,3 +1,16 @@
+# leetcode 25: Reverse Nodes in k-Group
+# Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list.
+# If the number of nodes is not a multiple of k then left-out nodes, in the end, should remain as it is.
+# https://leetcode.com/problems/reverse-nodes-in-k-group/
+# Example 1:
+# Input: head = [1,2,3,4,5], k = 2
+# Output: [2,1,4,3,5]
+# Approach: Reverse in groups
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 
 
 class Solution:

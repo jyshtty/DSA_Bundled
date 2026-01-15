@@ -1,3 +1,15 @@
+# leetcode 160: Intersection of Two Linked Lists
+# Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.
+# https://leetcode.com/problems/intersection-of-two-linked-lists/
+# Example 1:
+# Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+# Output: Intersected at '8'
+# Approach: Two pointers
+# Time Complexity: O(m+n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 #Approach 1
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:

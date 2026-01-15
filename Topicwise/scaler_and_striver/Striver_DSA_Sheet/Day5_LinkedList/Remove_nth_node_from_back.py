@@ -1,3 +1,15 @@
+# leetcode 19: Remove Nth Node From End of List
+# Given the head of a linked list, remove the nth node from the end of the list and return its head.
+# https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+# Example 1:
+# Input: head = [1,2,3,4,5], n = 2
+# Output: [1,2,3,5]
+# Approach: Two pointers
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 class ListNode(object):
     def __init__(self, val=0, next=None):
         self.val = val

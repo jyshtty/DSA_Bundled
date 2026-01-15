@@ -1,3 +1,17 @@
+# Repeat and Missing Number
+# You are given a read only array of n integers from 1 to n.
+# Each integer appears exactly once except A which appears twice and B which is missing.
+# Return A and B.
+# https://www.interviewbit.com/problems/repeat-and-missing-number-array/
+# Example:
+# Input: [3,1,2,5,3]
+# Output: [3,4]
+# Approach: Using math - sum and sum of squares
+# Time Complexity: O(n)
+# Space Complexity: O(1)
+# Implementation:
+
+
 """
 Repeat and Missing Number
 https://www.youtube.com/watch?v=5nMGY4VUoRY&list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&index=3  (Problem link in description)
