@@ -27,6 +27,24 @@ def foo(A):
 print(foo(A))
 
 
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        sum = 0
+        maxi = float('-inf')
+        if len(nums) == 1:
+            return nums[0]
+        for i in range(len(nums)):
+            sum = sum + nums[i]
+
+            if sum > maxi:
+                maxi = max(sum, maxi)
+
+            if sum < 0:
+                sum = 0
+        return maxi
+
+
+
 # import  protgres
 #
 # connection = protgres.connect('connection'string)
