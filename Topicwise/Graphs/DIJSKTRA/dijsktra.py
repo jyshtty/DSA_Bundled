@@ -21,7 +21,8 @@ class Solution:
             graph[u].append((v, w))
             graph[v].append((u, w))
 
-        distance = [float("inf") for _ in range(A)]
+        distance = [float("inf") for _ in range(A)] # initialize distances to infinity because we don't know the shortest distance yet.
+        # -1 will be assigned later for unreachable nodes. -1 is not used here because we need to perform comparisons with distances. which can lead to incorrect results if we use -1 initially.
 
         from heapq import heapify, heappush, heappop
         heap = []
@@ -31,7 +32,7 @@ class Solution:
         distance[C] = 0
         while heap:
             cur_dist, cur_node = heappop(heap)
-
+            # at this point, we always have the shortest distance to cur_node stored distance array. But there might be outdated entries in the heap for cur_node with larger distances.
             if cur_dist == distance[cur_node]:          # outdated heap entries are ignored i.e if we have already found a better distance for cur_node, we skip processing it. 
                 for neighbor, weight in graph[cur_node]:
                     if distance[cur_node] + weight < distance[neighbor]:
