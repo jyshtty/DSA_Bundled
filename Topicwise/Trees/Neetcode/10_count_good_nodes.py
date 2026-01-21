@@ -8,11 +8,11 @@
 class Solution:
     def goodNodes(self, root: TreeNode) -> int:
 
-        def dfs(node, maxVal):
+        def dfs(node, maxVal): # Each recursive call gets its own copy of maxVal
             if not node:
                 return 0
 
-            res = 1 if node.val >= maxVal else 0
+            res = 1 if node.val >= maxVal else 0 
             maxVal = max(maxVal, node.val)
             res = res + dfs(node.left, maxVal) + dfs(node.right, maxVal)
             return res

@@ -2,3 +2,4 @@
 
 
 # find index of minimum element ---------- find pivot - which is lowest number in list
+

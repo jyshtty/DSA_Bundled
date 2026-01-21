@@ -1,3 +1,6 @@
+# Binary Search in a nearly sorted array
+# The problem is about searching in a nearly sorted array using binary search.
+
 # same as binary search with follwoing changes.False
 
 # 1. check arr[mid-1], ,arr[mid], arr[mid+1] ,     if you find elem return
