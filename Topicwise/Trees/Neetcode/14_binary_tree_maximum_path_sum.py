@@ -11,7 +11,7 @@ class Solution:
     def maxPathSum(self, root: Optional[TreeNode]) -> int:
             
 
-        res = float("-inf")
+        res = float("-inf") # to store the maximum path sum found so far. -inf ensures [-3] case is handled.
         def solve(root):
             nonlocal res
 
