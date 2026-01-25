@@ -9,7 +9,7 @@ class Solution:
         # Phase 1: Find candidate
         for num in A:
             if count == 0:
-                candidate = num
+                candidate = num # potential majority element
                 count = 1
             elif num == candidate:
                 count += 1
