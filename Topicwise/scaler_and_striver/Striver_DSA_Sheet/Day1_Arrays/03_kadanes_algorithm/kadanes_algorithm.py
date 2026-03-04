@@ -18,7 +18,7 @@ Find maximum sum of a subarray in O(N)
 A = [-2,-3,4,-1,-2,1,5,-3]
 def foo(A):
     sum_ = 0
-    maxi = -float('inf')
+    maxi = -float('inf') # You can start maxi = 0, but it will give wrong answers when all numbers are negative.
     for x in A:
         sum_ = max(x, sum_ + x)   # Either start new subarray at x or extend
         maxi = max(maxi, sum_)
