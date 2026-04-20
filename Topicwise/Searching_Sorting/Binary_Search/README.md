@@ -1,3 +1,8 @@
+## Binary Search template
+
+https://leetcode.com/discuss/post/786126/python-powerful-ultimate-binary-search-t-rwv8/
+
+
 # ary_Search
 
 <img width="1552" height="886" alt="image" src="https://github.com/user-attachments/assets/41b11f35-74ae-40a7-ab2e-d650c0baccd6" />
