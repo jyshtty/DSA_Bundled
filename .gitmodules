@@ -1,18 +1,9 @@
-[submodule "Leetcode-1"]
-	path = Leetcode-1
-	url = https://github.com/jyshtty/Leetcode-1.git
 [submodule "Tries"]
 	path = Tries
 	url = https://github.com/jyshtty/Trie-and-Heaps.git
-[submodule "Leetcode"]
-	path = Leetcode
-	url = https://github.com/jyshtty/leet_code.git
 [submodule "Neetcode_Solutions"]
 	path = Neetcode_Solutions
 	url = https://github.com/jyshtty/leetcode.git
 [submodule "Python_Leetcode_Solutions"]
 	path = Python_Leetcode_Solutions
 	url = https://github.com/jyshtty/leetcode-2.git
-[submodule "Leetcode_CPP_All"]
-	path = Leetcode_CPP_All
-	url = https://github.com/jyshtty/LeetCode-3.git
