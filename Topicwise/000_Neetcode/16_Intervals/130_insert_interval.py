@@ -16,29 +16,19 @@ Constraints:
     intervals[i].length == 2
     intervals is sorted by start time.
 """
-
 from typing import List
 
 
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        result = []
-        i = 0
-        n = len(intervals)
-
-        # add all intervals that end before the new interval starts
-        while i < n and intervals[i][1] < newInterval[0]:
-            result.append(intervals[i])
-            i += 1
-
-        # merge all overlapping intervals
-        while i < n and intervals[i][0] <= newInterval[1]:
-            newInterval[0] = min(newInterval[0], intervals[i][0])
-            newInterval[1] = max(newInterval[1], intervals[i][1])
-            i += 1
-
-        result.append(newInterval)
-
-        # add remaining intervals
-        result.extend(intervals[i:])
-        return result
+        ans = []
+        for int_index in range(len(intervals)):
+            if newInterval[1] < intervals[int_index][0]:
+                ans.append(newInterval)
+                return ans + intervals[int_index:]
+            elif intervals[int_index][1] < newInterval[0]:
+                ans.append(intervals[int_index])
+            else:
+                newInterval = [min(newInterval[0], intervals[int_index][0]), max(newInterval[1], intervals[int_index][1])]
+        ans.append(newInterval)
+        return ans
