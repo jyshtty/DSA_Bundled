@@ -15,18 +15,26 @@ Constraints:
     -10^4 <= xi, yi <= 10^4
 """
 
-from typing import List
 import heapq
-
-
 class Solution:
-    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
-        # max-heap of size k: keep the k closest by evicting the farthest
-        heap = []
-        for x, y in points:
-            dist = -(x * x + y * y)  # negate for max-heap; skip sqrt (monotone transformation)
-            heapq.heappush(heap, (dist, x, y))
-            if len(heap) > k:
-                heapq.heappop(heap)
+    # @param A : list of list of integers
+    # @param B : integer
+    # @return a list of list of integers
+    def solve(self, A, B):
+        pq = []
+        for p in A:
+            heapq.heappush(pq, [-p[0] * p[0] - p[1] * p[1], p])
+            print(pq)
 
-        return [[x, y] for _, x, y in heap]
+            if len(pq) > B: # Important - just make sure points with highest distance from (0,0) is poped out when total count is greater than B.
+                heapq.heappop(pq)
+        print(pq)
+        return [p for _, p in pq]
+
+A = [
+       [1, 3],
+       [-2, 2]
+     ]
+B = 1
+obj = Solution()
+print(obj.solve(A, B))

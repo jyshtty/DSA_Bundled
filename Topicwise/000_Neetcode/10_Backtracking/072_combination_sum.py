@@ -18,24 +18,20 @@ Constraints:
     1 <= target <= 40
 """
 
-from typing import List
-
-
 class Solution:
-    def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        result = []
+    def combinationSum(self, candidates, target):
+        ans = []
 
-        def backtrack(start, current, remaining):
-            if remaining == 0:
-                result.append(current[:])
+        def backtrack(index, sum, temp):
+            if index == len(candidates) or sum > target:
                 return
-            if remaining < 0:
+            if sum == target:
+                ans.append(temp.copy())
                 return
+            temp.append(candidates[index])
+            backtrack(index, sum + candidates[index], temp)
+            temp.pop()
+            backtrack(index + 1, sum, temp)
 
-            for i in range(start, len(candidates)):
-                current.append(candidates[i])
-                backtrack(i, current, remaining - candidates[i])  # i not i+1 — reuse allowed
-                current.pop()
-
-        backtrack(0, [], target)
-        return result
+        backtrack(0, 0, [])
+        return ans

@@ -15,23 +15,36 @@ Constraints:
     -10 <= nums[i] <= 10
 """
 
-from typing import List
+# Approach
+# 1. Sort the  array
+# 2. Do a func call for # All subsets that include nums[i]
+# 3. Check if nums[i] == nums[i+1], then i += 1
+# 4.  Do a func call for # All subsets that do not include nums[i]
 
 
-class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        nums.sort()  # sorting groups duplicates together so we can skip them cleanly
-        result = []
+class Solution(object):
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ans = []
+        temp = []
+        nums.sort()
 
-        def backtrack(start, current):
-            result.append(current[:])
-            for i in range(start, len(nums)):
-                # skip duplicate elements at the same recursion level
-                if i > start and nums[i] == nums[i - 1]:
-                    continue
-                current.append(nums[i])
-                backtrack(i + 1, current)
-                current.pop()
+        def backtrack(index, temp):
+            if index == len(nums):
+                ans.append(temp.copy())
+                return
 
-        backtrack(0, [])
-        return result
+            # All subsets that include nums[i]
+            temp.append(nums[index])
+            backtrack(index + 1, temp)
+            temp.pop()
+            while index + 1 < len(nums) and nums[index] == nums[index + 1]:
+                index += 1
+            # All subsets that do not include nums[i]
+            backtrack(index + 1, temp)
+
+        backtrack(0, temp)
+        return ans

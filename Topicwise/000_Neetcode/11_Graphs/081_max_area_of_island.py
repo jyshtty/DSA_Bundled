@@ -25,14 +25,28 @@ Constraints:
 from typing import List
 
 
+# we have used visited array.
+# you can instead reuse grid and make it '0' to mark it as visited, as shown in number of island quesiton.
+
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-        rows, cols = len(grid), len(grid[0])
+        ROWS, COLS = len(grid), len(grid[0])
+        visit = set()
 
         def dfs(r, c):
-            if not (0 <= r < rows and 0 <= c < cols) or grid[r][c] == 0:
+            if (r < 0 or r == ROWS or c < 0 or
+                c == COLS or grid[r][c] == 0 or
+                (r, c) in visit
+            ):
                 return 0
-            grid[r][c] = 0  # sink to avoid revisiting
-            return 1 + dfs(r+1, c) + dfs(r-1, c) + dfs(r, c+1) + dfs(r, c-1)
+            visit.add((r, c))
+            return (1 + dfs(r + 1, c) +
+                        dfs(r - 1, c) +
+                        dfs(r, c + 1) +
+                        dfs(r, c - 1))
 
-        return max(dfs(r, c) for r in range(rows) for c in range(cols))
+        area = 0
+        for r in range(ROWS):
+            for c in range(COLS):
+                area = max(area, dfs(r, c))
+        return area

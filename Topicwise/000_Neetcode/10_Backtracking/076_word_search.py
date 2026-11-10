@@ -19,27 +19,32 @@ Constraints:
     1 <= word.length <= 15
 """
 
-from typing import List
-
-
 class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
-        rows, cols = len(board), len(board[0])
+    def exist(self, board, word):
+        row = len(board)
+        col = len(board[0])
+        visited = set()
 
-        def dfs(r, c, idx):
-            if idx == len(word):
+        def backtrack(r, c, i):
+            if i == len(word): # If we have found the word
                 return True
-            if not (0 <= r < rows and 0 <= c < cols) or board[r][c] != word[idx]:
+            if (r < 0 or c < 0 or
+                    r > row - 1 or c > col - 1 or # Out of bounds
+                    board[r][c] != word[i] or # Character does not match
+                    (r, c) in visited): # to avoid circle. To avoid same position twice.
                 return False
 
-            board[r][c] = '#'  # mark as visited in-place — avoids a separate visited set
-            found = (dfs(r+1, c, idx+1) or dfs(r-1, c, idx+1) or
-                     dfs(r, c+1, idx+1) or dfs(r, c-1, idx+1))
-            board[r][c] = word[idx]  # restore for other paths
-            return found
+            # definitely board[r][c] == word[i] below. hence we increment i.
+            visited.add((r, c)) # Mark the cell as visited
+            res = (backtrack(r + 1, c, i + 1) or # Explore all 4 directions
+                   backtrack(r - 1, c, i + 1) or
+                   backtrack(r, c + 1, i + 1) or
+                   backtrack(r, c - 1, i + 1))
+            visited.remove((r, c)) # Unmark the cell for other paths
+            return res # Return whether we found the word
 
-        for r in range(rows):
-            for c in range(cols):
-                if dfs(r, c, 0):
+        for r in range(row):
+            for c in range(col):
+                if backtrack(r, c, 0):
                     return True
         return False

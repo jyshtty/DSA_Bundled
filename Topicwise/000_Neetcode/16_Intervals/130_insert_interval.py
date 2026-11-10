@@ -21,14 +21,24 @@ from typing import List
 
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        # Single pass over the sorted intervals.
+        # Time: O(n)   Space: O(n) for the result
         ans = []
         for int_index in range(len(intervals)):
+            # Case 1: current interval starts after newInterval ends -> no overlap,
+            # and every remaining interval is also after it. Add newInterval and
+            # append the rest unchanged.
             if newInterval[1] < intervals[int_index][0]:
                 ans.append(newInterval)
                 return ans + intervals[int_index:]
+            # Case 2: current interval ends before newInterval starts -> no overlap,
+            # it belongs before newInterval, so keep it as is.
             elif intervals[int_index][1] < newInterval[0]:
                 ans.append(intervals[int_index])
+            # Case 3: the two overlap -> merge them into newInterval and keep going,
+            # since it may also overlap with later intervals.
             else:
                 newInterval = [min(newInterval[0], intervals[int_index][0]), max(newInterval[1], intervals[int_index][1])]
+        # newInterval is the last one (or all intervals were before it), so add it now
         ans.append(newInterval)
         return ans

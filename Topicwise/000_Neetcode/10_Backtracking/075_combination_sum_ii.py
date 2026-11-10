@@ -17,28 +17,27 @@ Constraints:
     1 <= target <= 30
 """
 
-from typing import List
-
+# Make sure you check target == sum before you check index == len(candidates)
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates, target):
+        ans = []
         candidates.sort()
-        result = []
 
-        def backtrack(start, current, remaining):
-            if remaining == 0:
-                result.append(current[:])
+        def backtrack(index, sum, temp):
+            if sum == target:
+                ans.append(temp.copy())
                 return
 
-            for i in range(start, len(candidates)):
-                if candidates[i] > remaining:
-                    break  # sorted array — no point continuing
-                # skip duplicate candidates at the same level to avoid duplicate combos
-                if i > start and candidates[i] == candidates[i - 1]:
-                    continue
-                current.append(candidates[i])
-                backtrack(i + 1, current, remaining - candidates[i])  # i+1: each used once
-                current.pop()
+            if index == len(candidates) or sum > target:
+                return
 
-        backtrack(0, [], target)
-        return result
+            temp.append(candidates[index])
+            backtrack(index + 1, sum + candidates[index], temp)
+            temp.pop()
+            while index + 1 < len(candidates) and candidates[index] == candidates[index + 1]:
+                index += 1
+            backtrack(index + 1, sum, temp)
+
+        backtrack(0, 0, [])
+        return ans

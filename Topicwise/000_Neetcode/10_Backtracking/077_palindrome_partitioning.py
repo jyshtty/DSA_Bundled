@@ -15,26 +15,27 @@ Constraints:
     s consists of lowercase English letters.
 """
 
-from typing import List
-
-
 class Solution:
-    def partition(self, s: str) -> List[List[str]]:
-        result = []
+    def isPalin(self, l, r, s):
+        while l < r:
+            if s[l] != s[r]:
+                return False
+            else:
+                l += 1
+                r -= 1
+        return True
 
-        def is_palindrome(sub):
-            return sub == sub[::-1]
-
-        def backtrack(start, current):
-            if start == len(s):
-                result.append(current[:])
+    def partition(self, s):
+        ans = []
+        curr = []
+        def backtracking(i):
+            if i == len(s):
+                ans.append(curr.copy())
                 return
-            for end in range(start + 1, len(s) + 1):
-                substr = s[start:end]
-                if is_palindrome(substr):
-                    current.append(substr)
-                    backtrack(end, current)
-                    current.pop()
-
-        backtrack(0, [])
-        return result
+            for j in range(i, len(s)):
+                if self.isPalin(i, j, s):
+                    curr.append(s[i: j + 1])
+                    backtracking(j + 1)
+                    curr.pop()
+        backtracking(0)
+        return ans

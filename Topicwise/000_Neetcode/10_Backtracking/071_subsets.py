@@ -16,20 +16,52 @@ Constraints:
     All nums are unique.
 """
 
-from typing import List
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ans = []
+        temp = []
+
+        def generate(index, temp):
+            if index == len(nums):
+                ans.append(temp)
+                return
+            generate(index + 1, temp + [nums[index]])
+            generate(index + 1, temp)
+        generate(0, temp)
+        return sorted(ans)
 
 
-class Solution:
-    def subsets(self, nums: List[int]) -> List[List[int]]:
-        result = []
+# By not passing temp as arguement
+class Solution(object):
+    def subsets(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        ans = []
+        temp = []
 
-        def backtrack(start, current):
-            result.append(current[:])  # snapshot the current subset
+        def generate(index):
+            if index == len(nums):
+                new = []
+                for i in temp:
+                    new.append(i)
+                ans.append(new)
+                return
+            temp.append(nums[index])
+            generate(index + 1)
+            temp.pop()
+            generate(index + 1)
 
-            for i in range(start, len(nums)):
-                current.append(nums[i])
-                backtrack(i + 1, current)
-                current.pop()  # undo the choice before trying the next element
+        generate(0)
 
-        backtrack(0, [])
-        return result
+        return sorted(ans)
+
+if __name__ == "__main__":
+    nums = [1,2,3]
+    obj = Solution()
+    print(obj.subsets(nums))

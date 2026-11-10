@@ -28,8 +28,7 @@ class Solution:
         for start, end in intervals:
             if heap and heap[0] <= start:
                 # reuse the room that ends earliest (it's already free)
-                heapq.heapreplace(heap, end)
-            else:
-                heapq.heappush(heap, end)
+                heapq.heappop(heap)
+            heapq.heappush(heap, end)
 
         return len(heap)

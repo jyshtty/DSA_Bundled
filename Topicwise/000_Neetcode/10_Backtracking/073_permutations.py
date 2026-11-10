@@ -16,22 +16,27 @@ Constraints:
     All integers are unique.
 """
 
-from typing import List
-
-
 class Solution:
-    def permute(self, nums: List[int]) -> List[List[int]]:
-        result = []
+	# @param A : list of integers
+	# @return a list of list of integers
 
-        def backtrack(current, remaining):
-            if not remaining:
-                result.append(current[:])
-                return
-            for i in range(len(remaining)):
-                current.append(remaining[i])
-                # pass remaining without the chosen element to prevent reuse
-                backtrack(current, remaining[:i] + remaining[i+1:])
-                current.pop()
+	def generate(self, index, curr):
+		if index == len(self.A):
+			self.output.append(list(curr))
+			# print(curr)
+			return
+		for i in range(len(self.A)):
+			flag = 0
+			for j in range(index):
+				if curr[j] == self.A[i]:
+					flag = 1
+			if flag == 0:
+				curr[index] = self.A[i]
+				self.generate(index + 1, curr)
 
-        backtrack([], nums)
-        return result
+	def permute(self, A):
+		self.A = A
+		self.output = []
+		curr = [float('inf') for i in range(len(A))]
+		self.generate(0, curr)
+		return self.output

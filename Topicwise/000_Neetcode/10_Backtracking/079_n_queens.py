@@ -16,33 +16,38 @@ Constraints:
     1 <= n <= 9
 """
 
-from typing import List
-
-
 class Solution:
-    def solveNQueens(self, n: int) -> List[List[str]]:
-        cols = set()
-        diag1 = set()   # top-left to bottom-right: row - col is constant on same diagonal
-        diag2 = set()   # top-right to bottom-left: row + col is constant on same diagonal
-        board = [['.' ] * n for _ in range(n)]
-        result = []
+    def solveNQueens(self, n):
+        matrix = [["." for i in range(n)] for j in range(n)]
+        col = [False] * n
+        # diagonal (↙↗ or ↘↖) in an n × n chessboard represents a unique line across the board.
+        # There are a total of 2n - 1 such diagonals in each direction.
+        left_diag = [False] * (2 * n - 1)
+        right_diag = [False] * (2 * n - 1)
+        ans = []
 
-        def backtrack(row):
-            if row == n:
-                result.append([''.join(r) for r in board])
-                return
-            for col in range(n):
-                if col in cols or (row - col) in diag1 or (row + col) in diag2:
-                    continue
-                cols.add(col)
-                diag1.add(row - col)
-                diag2.add(row + col)
-                board[row][col] = 'Q'
-                backtrack(row + 1)
-                cols.remove(col)
-                diag1.remove(row - col)
-                diag2.remove(row + col)
-                board[row][col] = '.'
+        def backtrack(r, matrix, col, left_diag, right_diag):
+            if r == n:
+                temp = ["".join(x) for x in matrix]
+                ans.append(temp)
+                return 
+                
+            for column in range(n):
+                if col[column] == False and left_diag[r - column + n - 1] == False and right_diag[r + column] == False:
+                    # safe to place queen
+                    matrix[r][column] = 'Q'
 
-        backtrack(0)
-        return result
+                    col[column] = True
+                    left_diag[r - column + n - 1] = True
+                    right_diag[r + column] = True
+
+                    backtrack(r + 1, matrix, col, left_diag, right_diag)
+
+                    matrix[r][column] = '.'
+
+                    col[column] = False
+                    left_diag[r - column + n - 1] = False
+                    right_diag[r + column] = False
+
+        backtrack(0, matrix, col, left_diag, right_diag)
+        return ans
