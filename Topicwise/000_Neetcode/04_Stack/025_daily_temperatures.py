@@ -21,15 +21,22 @@ from typing import List
 
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        result = [0] * len(temperatures)
-        stack = []  # monotonic decreasing stack of indices
 
-        for i, temp in enumerate(temperatures):
-            # pop all days that are colder than today — today is their answer
-            while stack and temperatures[stack[-1]] < temp:
-                prev = stack.pop()
-                result[prev] = i - prev
+        stack = [len(temperatures) - 1]
+        ans = [0] * len(temperatures)
+
+        for i in range(len(temperatures) - 2, -1, -1):
+
+            while stack and temperatures[stack[-1]] <= temperatures[i]:
+                stack.pop()
+
+            if stack:
+                ans[i] = stack[-1] - i
 
             stack.append(i)
 
-        return result
+        return ans
+
+
+
+
